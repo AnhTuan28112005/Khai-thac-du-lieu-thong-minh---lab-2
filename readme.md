@@ -2,10 +2,10 @@
 
 ## Chuẩn Bị
 
-Mở **PowerShell**, vào thư mục gốc của project:
+Mở **PowerShell**,clone clone project từ github về máy, sau đó cd vào đúng project:
 
 ```powershell
-cd "C:\Users\admin!\OneDrive - VNU-HCMUS\Desktop\KHTN\NAM_3\KÌ 2\Khai thác dữ liệu ứng dụng\lab2"
+git clone  https://github.com/AnhTuan28112005/Khai-thac-du-lieu-thong-minh---lab-2.git
 ```
 
 ---
