@@ -156,3 +156,58 @@ julia --project=. src/main.jl -i data/toy/VD1_spmf.txt -m 3
 julia --project=. src/main.jl -i data/toy/VD2_spmf.txt -m 2
 julia --project=. src/main.jl -i data/toy/chess.txt -m 2900
 ```
+
+---
+
+## Chạy Notebook Chương 5 — Market Basket Analysis
+
+### Chuẩn Bị (chỉ làm một lần)
+
+**Bước 1 — Cài IJulia kernel cho Jupyter:**
+```powershell
+julia -e "using Pkg; Pkg.add(\"IJulia\")"
+```
+
+**Bước 2 — Cài dependencies của project:**
+```powershell
+julia --project=. -e "using Pkg; Pkg.instantiate()"
+```
+
+**Bước 3 — Cài thêm packages cần cho notebook:**
+```powershell
+julia --project=. -e "using Pkg; Pkg.add([\"Plots\", \"StatsBase\"])"
+```
+
+---
+
+### Chạy Notebook
+
+```powershell
+jupyter notebook
+```
+
+Trình duyệt mở ra → vào thư mục `notebooks/` → mở file `demo.ipynb` → chọn kernel **Julia 1.x**.
+
+Chạy toàn bộ notebook: menu **Kernel → Restart & Run All**.
+
+---
+
+### Lưu ý
+
+| Vấn đề | Giải thích |
+|--------|-----------|
+| Lần đầu chạy chậm (~1-2 phút) | Julia cần compile (JIT), từ lần 2 trở đi nhanh hơn |
+| Không thấy kernel Julia | Chạy lại Bước 1 rồi restart Jupyter |
+| Lỗi `include`: file not found | Đảm bảo mở Jupyter từ **thư mục gốc** của project, không phải từ trong `notebooks/` |
+| Không có output biểu đồ | Chạy lại cell bị lỗi, kiểm tra `Plots` đã được cài chưa |
+
+---
+
+### Output sau khi chạy xong
+
+Hai file được tự động tạo ra trong thư mục:
+```
+data/
+├── output_retail_freq_itemsets.txt   ← 333 frequent itemsets
+└── output_retail_top10_rules.txt     ← Top-10 association rules theo lift
+```
