@@ -158,6 +158,16 @@ julia --project=. src/main.jl -i data/toy/chess.txt -m 2900
 ```
 
 ---
+## Ảnh minh chứng ouput cuối khi chạy test 
+
+## Kết Quả Chạy Test
+
+![Test Correctness](img/test_result1.jpg)
+
+![Test Report](img/test_result2.jpg)
+
+![Test Benchmark](img/test_result3.jpg)
+
 
 ## Chạy Notebook Chương 5 — Market Basket Analysis
 
